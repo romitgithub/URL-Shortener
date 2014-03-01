@@ -1,10 +1,10 @@
 <?php
 
-$mysql_host = "mysql.hostinger.in";
-$mysql_user = "u936162527_short";
-$mysql_pass = "keepitshort";
+$mysql_host = "host_name";
+$mysql_user = "databse_user_name";
+$mysql_pass = "database_pwd";
 
-$mysql_db = "u936162527_short";
+$mysql_db = "database_name";
 
 mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die("Could not connect to MySQL : ".mysql_error());
 mysql_select_db($mysql_db) or die("Could not connect to Database : ".mysql_error());
