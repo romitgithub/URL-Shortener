@@ -1,10 +1,10 @@
 <?php
 
-$mysql_host = "localhost";
-$mysql_user = "root";
-$mysql_pass = "";
+$mysql_host = "mysql.hostinger.in";
+$mysql_user = "u936162527_short";
+$mysql_pass = "keepitshort";
 
-$mysql_db = "url_shortener";
+$mysql_db = "u936162527_short";
 
 mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die("Could not connect to MySQL : ".mysql_error());
 mysql_select_db($mysql_db) or die("Could not connect to Database : ".mysql_error());
@@ -39,7 +39,7 @@ function urlExistsinDB($url){
 	}
 	else{
 		$row = mysql_fetch_row($result);
-		return 'http://localhost/'.$row[2];
+		return 'http://foo.bl.ee/'.$row[2];
 	}
 }
 
@@ -78,7 +78,7 @@ function createShortCode($url){
 	$finalQuery = "UPDATE main SET short_code='$short_url' WHERE id='$id'";
 	mysql_query($finalQuery);
 
-	$finalurl = "http://localhost/$short_url";
+	$finalurl = "http://foo.bl.ee/$short_url";
 
 	return $finalurl;
 
